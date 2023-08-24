@@ -1,2 +1,2 @@
 #!ipxe
-chain --replace  https://raw.githubusercontent.com/ibrokethecloud/harvester-equinix-terraform/rc5/ipxe/ipxe-1.2.0-rc5
+shell
