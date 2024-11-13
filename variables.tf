@@ -123,3 +123,9 @@ variable "use_cheapest_metro" {
   default     = true
   description = "A boolean variable to control cheapest metro selection"
 }
+
+variable "arch" {
+  type = "string"
+  default = "amd64"
+  description = "Machine architecture, needed to ensure correct arch iso is downloaded for ipxe install"
+}

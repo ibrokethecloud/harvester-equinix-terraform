@@ -10,5 +10,5 @@ os:
 install:
   mode: join
   device: /dev/sda
-  iso_url: https://releases.rancher.com/harvester/${version}/harvester-${version}-amd64.iso
+  iso_url: https://releases.rancher.com/harvester/${version}/harvester-${version}-${arch}.iso
   tty: ttyS1,115200n8
