@@ -2,8 +2,7 @@
 set version v1.4.0-rc5
 set base https://github.com/harvester/harvester/releases/download/${version}
 set harvesterreleasebase https://releases.rancher.com/harvester/${version}
-set arch amd64
-iseq ${buildarch} arm64 && set arch arm64
+iseq ${buildarch} arm64 && set arch arm64 || set arch amd64
 dhcp
 iflinkwait -t 5000
 goto ${ifname}
