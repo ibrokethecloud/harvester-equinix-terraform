@@ -1,12 +1,12 @@
 variable "harvester_version" {
   type        = string
-  default     = "v1.3.1"
+  default     = "v1.4.0-rc5"
   description = "Harvester version to be installed (Must be a valid version tag from https://github.com/rancherlabs/terraform-harvester-equinix/tree/main/ipxe)"
 }
 
 variable "node_count" {
   type        = number
-  default     = 3
+  default     = 1
   description = "Number of nodes to deploy Harvester cluster"
 }
 
@@ -48,13 +48,13 @@ variable "billing_cycle" {
 
 variable "metro" {
   type        = string
-  default     = "SG"
+  default     = "DA"
   description = "Equinix metal data center location (https://deploy.equinix.com/developers/docs/metal/locations/metros/). Examples: SG,SV,AM,MA,Ny,LA,etc."
 }
 
 variable "ipxe_script" {
   type        = string
-  default     = "https://raw.githubusercontent.com/rancherlabs/terraform-harvester-equinix/main/ipxe/ipxe-"
+  default     = "https://raw.githubusercontent.com/ibrokethecloud/harvester-equinix-terraform/refs/heads/build-arch-support/ipxe/ipxe-"
   description = "URL to the iPXE script to use for booting the server (harvester_version will be appended to this without the 'v' prefix)"
 }
 
@@ -84,7 +84,7 @@ variable "ssh_key" {
 
 variable "num_of_vlans" {
   type        = number
-  default     = 2
+  default     = 0
   description = "Number of VLANs to be created"
 }
 
@@ -122,10 +122,4 @@ variable "use_cheapest_metro" {
   type        = bool
   default     = true
   description = "A boolean variable to control cheapest metro selection"
-}
-
-variable "arch" {
-  type = "string"
-  default = "amd64"
-  description = "Machine architecture, needed to ensure correct arch iso is downloaded for ipxe install"
 }
